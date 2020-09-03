@@ -7,12 +7,17 @@ public class SimpleBot {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Hello! My name is Aid.");
-        System.out.println("I was created in 2020");
+        System.out.println("I was created in 2018.");
         System.out.println("Please, remind me your name.");
 
-        String userName = scanner.next();
+        String name = scanner.nextLine();
 
-        System.out.println("What a great name you have, {}!\n".format(userName));
+        System.out.println("What a great name you have, " + name + "!");
+        System.out.println("Let me guess your age.");
+        System.out.println("Enter remainders of dividing your age by 3, 5 and 7.");
 
+        int age =  (scanner.nextInt() * 70 + scanner.nextInt() * 21 + scanner.nextInt() * 15) % 105;
+
+        System.out.printf("Your age is %d; that's a good time to start programming!",age);
     }
 }
